@@ -43,15 +43,19 @@ RUN wget https://www.python.org/ftp/python/3.11.0/Python-3.11.0.tgz && \
 # Create directories for both services
 WORKDIR /app
 
-RUN pip3.11 install git+https://github.com/open-webui/open-webui.git 
+#RUN pip3.11 install git+https://github.com/open-webui/open-webui.git 
+
+RUN pip3.11 install open-webui
 
 RUN curl -fsSL https://ollama.com/install.sh | sh 
 
 
-RUN open-webui serve
+
 
 # Expose necessary ports
 EXPOSE 8080 11434
+
+#RUN open-webui serve
 
 # Set the startup script as the entrypoint
 #ENTRYPOINT ["/bin/bash", "/app/start.sh"]
