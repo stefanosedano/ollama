@@ -1,5 +1,5 @@
 # Start from an Ubuntu base image with NVIDIA CUDA
-FROM nvidia/cuda:12.3.0-base-ubuntu22.04
+FROM nvidia/cuda:12.6.2-cudnn-devel-ubuntu22.04
 
 # Set environment variables for non-interactive installation
 ENV DEBIAN_FRONTEND=noninteractive
