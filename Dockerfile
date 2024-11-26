@@ -5,11 +5,12 @@ FROM nvidia/cuda:12.6.2-cudnn-devel-ubuntu22.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Update Ubuntu packages and install dependencies
-#RUN apt-get update && \
-#    apt-get install -y --no-install-recommends \
-#        software-properties-common \
-#        curl \
-#        git \
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        software-properties-common \
+        curl \
+        git \
+        wget
 #        ca-certificates \
 #        build-essential \
 #        libssl-dev \
